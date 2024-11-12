@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    image: brksirgio/helloworld:latest
+    ports:
+      - "8080:8080"
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: sugestoes
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Sergio@365
+    ports:
+      - "5432:5432"
